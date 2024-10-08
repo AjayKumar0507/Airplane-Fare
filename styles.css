@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto;
+}
+
+/*--------------------------NAVBAR -------------------------------*/
+
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    padding-left: 2rem;
+
+    background-color: rgb(228, 242, 248);
+}
+
+.nav-bar img{
+    width: 15%;
+    height: auto;
+}
+
+.nav-bar .nav-items{
+    width: 100%;
+    margin-left: 2rem;
+}
+
+.nav-bar .nav-items ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-bar .nav-items ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(77, 76, 76);
+    padding: 10px;
+}
+
+.nav-bar .nav-items ul li a:hover{
+    color: black;
+    background-color: rgb(198, 217, 224);
+    border-radius: 10px;
+}
+
+.login-signup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.nav-bar .login-signup img{
+    width:  13%;
+    padding-right: 25px;
+}
+
+.nav-bar .login-signup h3{
+    color:rgb(77, 76, 76);
+}
+
+
+/* -------------------------- home page -----------------------------*/
+
+
+
+.home{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(228, 242, 248);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 15rem;
+
+}
+
+.home-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+
+    width: 60%;
+    padding-left: 5rem;
+    padding-bottom: 8rem;
+}
+
+.home-desc h1{
+    font-size: 3rem;
+    padding-bottom: 5px;
+}
+
+.home-desc p{
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.home-desc button{
+    background-color: black;
+    color:white;
+    margin-top: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.home img{
+    width: 50%;
+    height: auto;
+}
+
+
+
+/*-------------------------------OVERLAY-----------------------------*/
+
+.home .predict-div{
+    width: 80%;
+    height: 30%;
+    background-color: rgb(228, 242, 248);
+
+    border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.home .overlay{
+    position: absolute;
+    transform: translateY(150%);
+}
+
+h2{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 28rem;
+}
+
+
+.home .predict-div .airlines{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.home .predict-div .airlines .airline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 11%;
+
+    background-color: rgb(238, 236, 236);
+    
+    margin-left:    5rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.home .predict-div .airlines .airline h3{
+    color: #555;
+}
+
+
+.home .predict-div .airlines .airline.selected {
+    background-color: black;
+    color: white;
+}
+
+.home .predict-div .airlines .airline.selected h3{
+    color: whitesmoke;
+}
+
+
+.airline.selected h3 {
+    color: white;
+}
+
+/*---------------------    PREDICT INFO  -------------------------*/
+
+.predict-info{
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.predict-info .from{
+    margin-left: 2rem;
+}
+
+.predict-info .from select{
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+
+/*------------------------  CALENDER ---------------------------------*/
+
+
+
+.booking-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.input-group {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding-left: 40px;
+    margin-left: 1rem;
+}
+
+.calendar-icon, .clock-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #666;
+}
+
+#journey-date::placeholder , #arrival-time::placeholder , #departure-time::placeholder{
+    color: white;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+button{
+    background-color: green;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 2rem;
+    font-size: 17px;
+}
+
+
+/*----------------------- FOOTER --------------------------*/
+
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #333;
+    padding: 70px 0;
+}
+.footer-col{
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: whitesmoke;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: whitesmoke;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #333;
+    background-color: whitesmoke;
+}
+
+
+.footer-col .social-links p{
+    color: white;
+    padding-bottom: 15px;
+}

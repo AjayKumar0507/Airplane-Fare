@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="nav-bar">
+            <img src="assets/logo.png" alt="">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="">Trujet</a></li>
+                    <li><a href="">SpiceJet</a></li>
+                    <li><a href="">Vistara</a></li>
+                    <li><a href="">Air India</a></li>
+                    <li><a href="">Jet Airways</a></li>
+                </ul>
+            </div>
+
+            <div class="login-signup">
+                <img src="assets/icons/airplane.png" alt="">
+                <img src="assets/icons/split.png" alt="">
+                <h3>LOGIN / SIGNUP</h3>
+            </div>
+        </div>
+        <div class="home">
+
+            <div class="home-desc">
+                <h1>Life is Short And</h1>
+                <h1>The World is Wide!</h1>
+                <p>To get the best of your adventure you just needed to leave and</p>
+                <p> go where you like. We are waiting for you.</p>
+                <button>Try For Free</button>
+            </div>
+            <img src="assets/home.png" alt="">
+
+            <div class="predict-div overlay">
+                <h2>Predict The Airplane Fare</h2>
+                <div class="airlines">
+                    <div class="airline">
+                        <input type="radio" name="airline" id="trujet">
+                        <h3>Trujet</h3>
+                    </div>
+                    <div class="airline">
+                        <input type="radio" name="airline" id="spicejet">
+                        <h3>SpiceJet</h3>
+                    </div>
+                    <div class="airline">
+                        <input type="radio" name="airline" id="vistara">
+                        <h3>Vistara</h3>
+                    </div>
+                    <div class="airline">
+                        <input type="radio" name="airline" id="airindia">
+                        <h3>AirIndia</h3>
+                    </div>
+                    <div class="airline">
+                        <input type="radio" name="airline" id="jetAirways">
+                        <h3>Jet Airways</h3>
+                    </div>
+                </div>
+
+                <div class="predict-info">
+                    <div class="from">
+                        <select name="" id="from">
+                            <option value="Origin">Origin</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    
+                    <div class="from">
+                        <select name="" id="to">
+                            <option value="Destination">Destination</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Cochin">Cochin</option>
+                        </select>
+                    </div>
+                    
+                    <div class="from">
+                        <select name="" id="stops">
+                            <option value="Stops">Stops</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                            
+                    <div class="booking-container">    
+                        <!-- Date Picker -->
+                        <div class="input-group">
+                            <i class="calendar-icon">&#x1F4C5;</i>
+                            <input type="text" id="journey-date" placeholder="Journey Date" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+
+                        <div class="input-group">
+                            <i class="clock-icon">&#x1F552;</i>
+                            <input type="text" id="departure-time" placeholder="Departure Time" onfocus="(this.type='time')" onblur="(this.type='text')">
+                        </div>
+                        
+                        <!-- Time Picker -->
+                        <div class="input-group">
+                            <i class="clock-icon">&#x1F552;</i>
+                            <input type="text" id="arrival-time" placeholder="Arrival Time" onfocus="(this.type='time')" onblur="(this.type='text')">
+                        </div>
+
+                    </div>
+    
+                    <button onclick="predictFare()" >Predict</button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">    
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>  
+                        </a>
+                        <p>www.linkedin.com/in/kakunuri-ajay-kumar</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <p>ajaykakunuri200457@gmail.com</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fa-solid fa-phone"></i> 
+                        </a>
+                        <p>+91 6305280351</p>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
