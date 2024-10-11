@@ -57,7 +57,9 @@ function getDuration(departure, arrival) {
 
 
 
-function predictFare(){
+function predictFare(btn){
+    btn.disabled = true
+    console.log(btn)
     
     /*  ---------------- GETTING AIRLINES SELECTED ----------------  */
     const airlines = document.querySelectorAll('input[name="airline"]');
@@ -223,4 +225,5 @@ async function sendData(inputArray) {
 
     const result = await response.json();
     window.alert(result.predictions);
+    document.querySelector('#predictBtn').disabled = false
 }
