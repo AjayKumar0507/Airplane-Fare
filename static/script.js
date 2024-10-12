@@ -58,6 +58,7 @@ function getDuration(departure, arrival) {
 
 
 function predictFare(btn){
+    btn.textContent = "Please Wait"
     btn.disabled = true
     console.log(btn)
     
@@ -225,5 +226,7 @@ async function sendData(inputArray) {
 
     const result = await response.json();
     window.alert(result.predictions);
-    document.querySelector('#predictBtn').disabled = false
+    const btn = document.querySelector('#predictBtn')
+    btn.textContent = "Predict"
+    btn.disabled = false
 }
